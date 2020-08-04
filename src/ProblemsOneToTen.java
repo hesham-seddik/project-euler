@@ -33,4 +33,21 @@ public class ProblemsOneToTen {
 
         return returnedValue;
     }
+
+    public static long problem2(long upperBound) {
+        long firstNumber = 1;
+        long secondNumber = 1;
+        long newTerm;
+        long returnedValue = 0;
+
+        while (secondNumber < upperBound) {
+            newTerm = firstNumber + secondNumber;
+            if(newTerm % 2 == 0) returnedValue += newTerm;
+
+            firstNumber = secondNumber;
+            secondNumber = newTerm;
+        }
+
+        return returnedValue;
+    }
 }
